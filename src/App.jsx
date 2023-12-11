@@ -11,11 +11,11 @@ import { Suspense, lazy } from "react";
 import SpinnerFullPage from "./component/SpinnerFullPage";
 
 const Homepage = lazy(() => import("./pages/Homepage"));
-const Pricing = lazy(() => import("./Pages/Pricing"));
-const Login = lazy(() => import("./Pages/Login"));
-const AppLayout = lazy(() => import("./Pages/AppLayout"));
-const Product = lazy(() => import("./Pages/About"));
-const PageNotFound = lazy(() => import("./Pages/PageNotFound"));
+const About = lazy(() => import("./pages/About"));
+const Pricing = lazy(() => import("./pages/Pricing"));
+const Login = lazy(() => import("./pages/Login"));
+const PageNotFound = lazy(() => import("./pages/PageNotFound"));
+const AppLayout = lazy(() => import("./pages/AppLayout"));
 
 function App() {
   return (
@@ -25,7 +25,7 @@ function App() {
           <Suspense fallback={<SpinnerFullPage />}>
             <Routes>
               <Route path="/" element={<Homepage />} />
-              <Route path="About" element={<Product />} />
+              <Route path="About" element={<About />} />
               <Route path="Pricing" element={<Pricing />} />
               <Route path="/Login" element={<Login />} />
               <Route path="*" element={<PageNotFound />} />

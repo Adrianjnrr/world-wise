@@ -10,7 +10,7 @@ import CountryList from "./component/CountryList";
 import { Suspense, lazy } from "react";
 import SpinnerFullPage from "./component/SpinnerFullPage";
 
-const Homepage = lazy(() => import("./Pages/Homepage"));
+const Homepage = lazy(() => import("./pages/Homepage"));
 const Pricing = lazy(() => import("./Pages/Pricing"));
 const Login = lazy(() => import("./Pages/Login"));
 const AppLayout = lazy(() => import("./Pages/AppLayout"));
